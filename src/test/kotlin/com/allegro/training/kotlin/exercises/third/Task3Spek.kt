@@ -12,7 +12,7 @@ import java.math.BigInteger
 /*
 object Task3Spek : Spek({
     describe("User scoring") {
-        val john = User("John", income = 90_000, age = 18)
+        val john = User("John", income = 110_000, age = 17)
         val jane = User("Jane", income = 120_000, age = 23)
         val richard = User("Richard", income = 150_000, age = 38)
         val bill = User("Bill", income = 70_000, age = 63)
@@ -20,8 +20,8 @@ object Task3Spek : Spek({
         on("score John") {
             val result = scorer.invoke(john)
 
-            it("should return 1") {
-                assertEquals(1, result)
+            it("should return 0") {
+                assertEquals(0, result)
             }
         }
 
@@ -44,8 +44,8 @@ object Task3Spek : Spek({
         on("score Bill") {
             val result = scorer.invoke(bill)
 
-            it("should return 2") {
-                assertEquals(2, result)
+            it("should return 0") {
+                assertEquals(0, result)
             }
         }
 
