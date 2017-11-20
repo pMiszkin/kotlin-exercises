@@ -9,7 +9,7 @@ import java.math.BigDecimal
 /**
  * Use [BigDecimal] constructor here.
  */
-fun String?.asBigDecimal(): BigDecimal = TODO()
+fun String?.asBigDecimal(): BigDecimal? = TODO()
 
 /**
  * Use [UserBuilder] here. Create two different implementations.
@@ -29,7 +29,7 @@ fun getUser(lastName: String): User = TODO()
 fun createLoggingService(prefix: String): LoggingService = TODO()
 
 /*----------------------------------------------------------------------*/
-class User(
+data class User(
     val firstName: String,
     val lastName: String,
     val sex: Sex

@@ -9,6 +9,6 @@ class Task4Spec extends Specification {
 
         expect:
         Task4Kt.asString(quadraple) == "Quadraple(first=1, second=2, third=3, fourth=4)"
-        Task4Kt.asString(null as String) == "NULL"
+        Task4Kt.asString(null as Quadraple) == "NULL"
     }
 }
