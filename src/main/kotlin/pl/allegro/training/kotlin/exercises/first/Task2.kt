@@ -27,27 +27,6 @@ interface Date {
     infix fun after(other: Date): Boolean
 }
 
-data class SimpleDate(
-    override val day: Int,
-    override val month: Int,
-    override val year: Int
-): Date {
-    override fun after(other: Date): Boolean =
-        dayNo(year, month, day) > dayNo(other.year, other.month, other.day)
+class MyDate
 
-    private fun dayNo(year: Int, month: Int, day: Int): Int =
-        year*400 + month*32 + day
-}
-
-fun parseDate(dateStr: String): Date = DATE_REGEX.matchEntire(dateStr)?.let {
-    val (yearStr, monthStr, dayStr) = it.destructured
-    val year = yearStr.toInt()
-    val month = monthStr.toInt()
-    val day = dayStr.toInt()
-
-    if (month < 1 || month > 12 || day < 1 || day > maxDaysInMonth(month, year)) {
-        throw IllegalArgumentException("Invalid day or month")
-    }
-
-    SimpleDate(day, month, year)
-} ?: throw IllegalArgumentException("Cannot parse date")
+fun parseDate(dateStr: String): Date = TODO()

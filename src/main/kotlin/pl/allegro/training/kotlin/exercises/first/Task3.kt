@@ -12,18 +12,8 @@ interface Process<in A, out B> {
     fun run(input: A): B
 }
 
-class EchoProcess<T> : Process<T, T> {
-    override fun run(input: T): T = input
-}
+class EchoProcess
 
-class ShredProcess<in A> : Process<A, Unit> {
-    override fun run(input: A) {
-        if (!input.toString().contains("TOP SECRET")) {
-            throw IllegalArgumentException()
-        }
-    }
-}
+class ShredProcess
 
-class EventStreamProcess<out B>(private val output: B) : Process<Unit, B> {
-    override fun run(input: Unit): B = output
-}
+class EventStreamProcess

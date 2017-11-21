@@ -12,10 +12,4 @@ package pl.allegro.training.kotlin.exercises.first
  * The value of `code` does not have to be preserved.
  */
 
-class MyError(
-        code: String,
-        val message: String?,
-        val httpStatus: Int = 500
-) {
-    override fun toString() = "$httpStatus:$message"
-}
+class MyError
