@@ -37,6 +37,7 @@ dependencies {
     testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
     testCompile 'org.jetbrains.spek:spek-api:1.1.5'
     testRuntime 'org.jetbrains.spek:spek-junit-platform-engine:1.1.5'
+    testCompile('org.spockframework:spock-core:1.1-groovy-2.4')
 }
 
 compileKotlin {
