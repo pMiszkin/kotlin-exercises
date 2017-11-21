@@ -11,11 +11,11 @@ import java.math.BigInteger
 
 /*
 object Task3Spek : Spek({
-    describe("User scoring") {
-        val john = User("John", income = 110_000, age = 17)
-        val jane = User("Jane", income = 120_000, age = 23)
-        val richard = User("Richard", income = 150_000, age = 38)
-        val bill = User("Bill", income = 70_000, age = 63)
+    describe("Customer scoring") {
+        val john = Customer("John", income = 110_000, age = 17)
+        val jane = Customer("Jane", income = 120_000, age = 23)
+        val richard = Customer("Richard", income = 150_000, age = 38)
+        val bill = Customer("Bill", income = 70_000, age = 63)
 
         on("score John") {
             val result = scorer.invoke(john)

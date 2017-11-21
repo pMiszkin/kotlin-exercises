@@ -1,4 +1,4 @@
-package com.allegro.training.kotlin.exercises.third
+package pl.allegro.training.kotlin.exercises.third
 
 import java.math.BigInteger
 

@@ -1,4 +1,4 @@
-package com.allegro.training.kotlin.exercises.third
+package pl.allegro.training.kotlin.exercises.third
 
 /**
  * Make the constructor of [Person] class private and provide a factory function

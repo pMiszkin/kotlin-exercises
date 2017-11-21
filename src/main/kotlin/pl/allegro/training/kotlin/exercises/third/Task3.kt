@@ -1,9 +1,9 @@
-package com.allegro.training.kotlin.exercises.third
+package pl.allegro.training.kotlin.exercises.third
 
 /**
- * Define a `scoreSorted` extension function on `List<User>` which takes as an argument
- * a scoring function (which takes a `User` as an argument and returns an `Int`) and returns
- * a `List<User>` sorted according to scoring.
+ * Define a `scoreSorted` extension function on `List<Customer>` which takes as an argument
+ * a scoring function (which takes a `Customer` as an argument and returns an `Int`) and returns
+ * a `List<Customer>` sorted according to scoring.
  *
  * Define a val with the name `scorer` which holds a scoring function with the following scoring algorithm:
  * if (income < 100_000) 0 points
@@ -16,7 +16,7 @@ package com.allegro.training.kotlin.exercises.third
  *      + 1 point if 65 <= age
  */
 
-data class User(
+data class Customer(
     val id: String,
     val income: Int,
     val age: Int

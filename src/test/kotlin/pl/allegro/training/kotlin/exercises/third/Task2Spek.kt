@@ -1,6 +1,6 @@
 package pl.allegro.training.kotlin.exercises.third
 
-import com.allegro.training.kotlin.exercises.third.VulgarFraction
+import pl.allegro.training.kotlin.exercises.third.VulgarFraction
 import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
