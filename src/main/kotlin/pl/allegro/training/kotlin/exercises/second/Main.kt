@@ -1,4 +1,4 @@
-package com.allegro.training.kotlin.exercises.first
+package pl.allegro.training.kotlin.exercises.second
 
 import java.time.LocalDate
 
