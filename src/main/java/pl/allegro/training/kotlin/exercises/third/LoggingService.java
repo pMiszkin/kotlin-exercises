@@ -1,4 +1,4 @@
-package com.allegro.training.kotlin.exercises.second;
+package pl.allegro.training.kotlin.exercises.third;
 
 public class LoggingService {
     private String prefix = "";

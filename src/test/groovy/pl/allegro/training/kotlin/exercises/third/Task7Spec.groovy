@@ -3,7 +3,7 @@ package pl.allegro.training.kotlin.exercises.third
 import kotlin.Pair
 import spock.lang.Specification
 
-import static com.allegro.training.kotlin.exercises.second.Task3Kt.pairContains
+import static pl.allegro.training.kotlin.exercises.third.Task7Kt.pairContains
 
 class Task7Spec extends Specification {
     def "should be able to loop over a Pair with for loop"() {
