@@ -29,7 +29,7 @@ internal class Task2Test {
 
     @Test
     fun `should throw when day is out of range`() {
-        assertThrows(IllegalArgumentException::class.java, { parseDate("1986/04/31")})
+        assertThrows(IllegalArgumentException::class.java, { parseDate("1986-04-31")})
     }
 
     @Test
