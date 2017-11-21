@@ -8,7 +8,7 @@ class Task8Spec extends Specification {
         def quadraple = new Quadraple(1, 2, 3, 4)
 
         expect:
-        Task4Kt.asString(quadraple) == "Quadraple(first=1, second=2, third=3, fourth=4)"
-        Task4Kt.asString(null as Quadraple) == "NULL"
+        Task8Kt.asString(quadraple) == "Quadraple(first=1, second=2, third=3, fourth=4)"
+        Task8Kt.asString(null as Quadraple) == "NULL"
     }
 }

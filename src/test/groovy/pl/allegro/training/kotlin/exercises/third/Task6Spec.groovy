@@ -8,7 +8,7 @@ class Task6Spec extends Specification {
         def list = ["alone", "abroad", "about", "abroad", "abroad", "about"]
 
         expect:
-        Task2Kt.regularContainsTimes(list, word, times) == expectedValue
+        Task6Kt.regularContainsTimes(list, word, times) == expectedValue
 
         where:
         word     | times | expectedValue
