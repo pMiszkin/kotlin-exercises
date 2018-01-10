@@ -42,16 +42,17 @@ internal class Task2Test {
         assertEquals(date.day, 29)
     }
 
+
     @Test
-    fun `after method should return true for date1 being after date2`() {
+    fun `after method should return true for 1986-04-27 being after 1986-03-28`() {
         val date1 = parseDate("1986-04-27")
-        val date2 = parseDate("1986-04-26")
+        val date2 = parseDate("1986-03-28")
 
         assertTrue(date1 after date2)
     }
 
     @Test
-    fun `after method should return false for date1 after date2`() {
+    fun `after method should return false for 1986-04-26 after 1986-04-27`() {
         val date1 = parseDate("1986-04-26")
         val date2 = parseDate("1986-04-27")
 
