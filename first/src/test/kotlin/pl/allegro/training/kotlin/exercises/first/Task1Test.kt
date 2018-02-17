@@ -65,33 +65,5 @@ internal class Task1Test {
         assertTrue(constructor.parameters[2].isOptional)
         assertTrue(constructor.parameters[2].type == nonNullableIntType)
     }
-
-    @Test
-    fun `should work correctly for any pair of dates`() {
-        val random = Random()
-        repeat(10_000) {
-            val date1 = random.nextInt(65536)
-            val date2 = random.nextInt(65536)
-            val date1Str = date1.toDateString()
-            val date2Str = date2.toDateString()
-            val parsedDate1 = parseDate(date1Str)
-            val parsedDate2 = parseDate(date2Str)
-
-            if (date1 > date2) {
-                assertTrue(parsedDate1 after parsedDate2, "$date1Str should be after $date2Str")
-                assertFalse(parsedDate2 after parsedDate1, "$date2Str should not be after $date1Str")
-            }
-            if (date1 < date2) {
-                assertTrue(parsedDate2 after parsedDate1, "$date2Str should be after $date1Str")
-                assertFalse(parsedDate1 after parsedDate2, "$date1Str should not be after $date2Str")
-            }
-            if (date1 == date2) {
-                assertFalse(parsedDate1 after parsedDate2, "$date1Str should not be after $date2Str")
-                assertFalse(parsedDate2 after parsedDate1, "$date2Str should not be after $date1Str")
-            }
-        }
-    }
-
-    private fun Int.toDateString() = LocalDate.parse("1900-01-01").plusDays(this.toLong()).toString()
 }
 */
