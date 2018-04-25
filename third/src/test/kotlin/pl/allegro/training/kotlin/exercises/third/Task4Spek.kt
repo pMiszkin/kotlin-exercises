@@ -9,7 +9,7 @@ import org.junit.Assert.assertTrue
 import java.lang.reflect.Modifier
 import kotlin.reflect.jvm.javaConstructor
 
-/*
+
 object Task4Spek : Spek({
     describe("Person creation") {
         on("create Person with Person.create") {
@@ -28,4 +28,3 @@ object Task4Spek : Spek({
         }
     }
 })
-*/

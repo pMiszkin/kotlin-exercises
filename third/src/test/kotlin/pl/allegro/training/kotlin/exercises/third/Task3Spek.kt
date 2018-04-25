@@ -9,7 +9,7 @@ import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import java.math.BigInteger
 
-/*
+
 object Task3Spek : Spek({
     describe("Customer scoring") {
         val john = Customer("John", income = 110_000, age = 17)
@@ -59,4 +59,3 @@ object Task3Spek : Spek({
 
     }
 })
-*/

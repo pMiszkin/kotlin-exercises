@@ -10,4 +10,6 @@ import java.math.BigInteger
 data class VulgarFraction(
     val numerator: BigInteger,
     val denominator: BigInteger
-)
+) {
+
+}

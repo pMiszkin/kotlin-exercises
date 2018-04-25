@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 import java.time.LocalDate
 import java.util.Random
 
-/*
+
 internal class Task2Test {
 
     @Test
@@ -90,4 +90,3 @@ internal class Task2Test {
 
     private fun Int.toDateString() = LocalDate.parse("1900-01-01").plusDays(this.toLong()).toString()
 }
-*/

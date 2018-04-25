@@ -25,6 +25,19 @@ interface Date {
     infix fun after(other: Date): Boolean
 }
 
-class MyDate
+class MyDate(
+        override val day: Int,
+        override val month: Int,
+        override val year: Int) : Date {
 
-fun parseDate(dateStr: String): Date = TODO()
+    override fun after(other: Date): Boolean = year*1000000+month*100+day > other.year*1000000+other.month*100+other.day
+
+    fun equals(other: Date): Boolean = year*1000000+month*100+day > other.year*1000000+other.month*100+other.day
+}
+
+fun parseDate(dateStr: String): Date {
+    val (year, month, day) =
+            ( DATE_REGEX.matchEntire(dateStr) ?: throw IllegalArgumentException() ).destructured
+    if(day.toInt() > maksymalna_liczba_dni_w_miesiacu_danego_roku(month.toInt(), year.toInt())) throw IllegalArgumentException()
+    return MyDate(day.toInt(), month.toInt(), year.toInt())
+}

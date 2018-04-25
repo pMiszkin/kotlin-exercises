@@ -1,5 +1,7 @@
 package pl.allegro.training.kotlin.exercises.second
 
+import java.io.File
+import java.io.InputStream
 import java.time.LocalDate
 
 /*
@@ -33,7 +35,10 @@ import java.time.LocalDate
     Fill Column enum according to task board description above.
 */
 enum class Column {
-
+    TODO,
+    INPROGRESS,
+    TOVERIFY,
+    DONE
 }
 
 /*
@@ -51,6 +56,13 @@ abstract class TaskEvent {
     abstract val taskName: String
 }
 
+class Created(override val date: LocalDate, override val taskName: String, val difficulty: Int = DEFAULT_DIFFICULTY) : TaskEvent() {
+}
+class Moved(override val date: LocalDate, override val taskName: String, val column: Column) : TaskEvent() {
+}
+class Deleted(override val date: LocalDate, override val taskName: String) : TaskEvent() {
+}
+
 /*
     STEP 3:
 
@@ -63,7 +75,31 @@ abstract class TaskEvent {
     - 'when' expression can be handy,
     - in case of an error, throw IllegalArgumentException with meaningful message.
 */
-fun parseFile(path: String): List<TaskEvent> = TODO()
+fun parseFile(path: String): List<TaskEvent> {
+    val inputStream: InputStream = File("task_history.csv").inputStream()
+    val lineList = mutableListOf<String>()
+    inputStream.bufferedReader().useLines { lines -> lines.forEach { lineList.add(it) } }
+    return lineList.map {
+        val split = it.split(",")
+        val ( date, taskName, event) = split
+        when (event) {
+            "CREATED" -> Created(
+                    LocalDate.parse(date),
+                    taskName,
+                    split.getOrNull(3)?.toInt() ?: DEFAULT_DIFFICULTY
+            )
+            "MOVED" -> Moved(
+                    LocalDate.parse(date),
+                    taskName,
+                    Column.valueOf(split[3])
+            )
+            else -> Deleted(
+                    LocalDate.parse(date),
+                    taskName
+            )
+        }
+    }
+}
 
 /*
     In the CSV file, task creation event may not have task's difficulty level.
@@ -83,8 +119,12 @@ private const val DEFAULT_DIFFICULTY = 3
         to create one, also as immutable type,
     - use previously defined Column enum to represent columns.
 */
-class TaskBoard {
+data class TaskBoard(val tasks: Map<String, Column>) {
 
+   /* fun move(taskName: String, toColumn: Column): Map<String, Column> {
+        return mapOf(tasks.filterKeys { tas })
+    }
+}*/
     /*
         STEP 5:
 

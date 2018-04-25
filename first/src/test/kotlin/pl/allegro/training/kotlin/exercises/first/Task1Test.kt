@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import kotlin.reflect.full.createType
 
-/*
+
 internal class Task1Test {
 
     @Test
@@ -66,4 +66,3 @@ internal class Task1Test {
         assertTrue(constructor.parameters[2].type == nonNullableIntType)
     }
 }
-*/

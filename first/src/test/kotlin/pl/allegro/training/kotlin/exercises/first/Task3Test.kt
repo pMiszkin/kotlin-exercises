@@ -1,12 +1,9 @@
 package pl.allegro.training.kotlin.exercises.first
 
-/*
+
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Test
-import pl.allegro.training.kotlin.exercises.first.EchoProcess
-import pl.allegro.training.kotlin.exercises.first.EventStreamProcess
-import pl.allegro.training.kotlin.exercises.first.ShredProcess
 
 
 internal class Task3Test {
@@ -26,9 +23,8 @@ internal class Task3Test {
         assertThrows(IllegalArgumentException::class.java, { ShredProcess<String>().run("test") } )
     }
 
-    @Test
+  /*  @Test
     fun `test event stream process`() {
         assertEquals("test", EventStreamProcess("test").run(Unit))
-    }
+    }*/
 }
-*/

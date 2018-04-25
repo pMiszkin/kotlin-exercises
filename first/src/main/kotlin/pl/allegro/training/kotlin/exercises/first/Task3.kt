@@ -12,8 +12,16 @@ interface Process<in A, out B> {
     fun run(input: A): B
 }
 
-class EchoProcess
+class EchoProcess<T> : Process<T, T> {
+    override fun run(input: T) = input
+}
 
-class ShredProcess
-
-class EventStreamProcess
+class ShredProcess<A> : Process<A, Unit> {
+    override fun run(input: A) {
+        input is String
+    }
+}
+/*
+class EventStreamProcess(output: B) : Process<Unit, B> {
+    override fun run(input: Unit) = output
+}*/

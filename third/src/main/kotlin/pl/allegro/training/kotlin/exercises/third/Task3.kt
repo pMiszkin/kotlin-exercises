@@ -22,3 +22,11 @@ data class Customer(
     val age: Int
 )
 
+val scorer = <Customer> invoke(custome: Customer): Int {
+    
+}
+
+fun List<Customer>.scoreSorted(customer: Customer) {
+
+}
+
